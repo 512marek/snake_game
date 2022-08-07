@@ -77,7 +77,6 @@ def main():
     def is_dead():
         for part in snake:
             if part == snake[0] and part is not snake[0] or snake[0][0] == -20 or snake[0][0] == 600 or snake[0][1] == -20 or snake[0][1] == 600:
-                
                 fontObj = pygame.font.Font('freesansbold.ttf', 20)
                 textSurfaceObj = fontObj.render("You died, your score is: " + str(points), True, GREEN, TRANSPARENT)
                 textRectObj = textSurfaceObj.get_rect()
@@ -85,10 +84,6 @@ def main():
                 game_window.blit(textSurfaceObj, textRectObj)
                 pygame.display.update()
                 sleep(5)
-                
-
-
-
                 pygame.quit()
                 sys.exit()
 
